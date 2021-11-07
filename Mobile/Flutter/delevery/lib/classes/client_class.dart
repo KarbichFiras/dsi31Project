@@ -1,0 +1,3 @@
+class client {
+  //extends perssonne
+}
