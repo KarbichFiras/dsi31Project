@@ -11,6 +11,7 @@ import { PaymentsComponent } from './payments/payments.component';
 import { AddfoodComponent } from './addfood/addfood.component';
 import { PanierComponent } from './panier/panier.component';
 import { SearchFComponent } from './search-f/search-f.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchFComponent } from './search-f/search-f.component';
     PaymentsComponent,
     AddfoodComponent,
     PanierComponent,
-    SearchFComponent
+    SearchFComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
