@@ -12,6 +12,7 @@ import { AddfoodComponent } from './addfood/addfood.component';
 import { PanierComponent } from './panier/panier.component';
 import { SearchFComponent } from './search-f/search-f.component';
 import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
