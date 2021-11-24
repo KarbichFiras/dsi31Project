@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Navbar2Component } from './navbar2/navbar2.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -32,8 +32,7 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
