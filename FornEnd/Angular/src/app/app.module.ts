@@ -13,6 +13,9 @@ import { PanierComponent } from './panier/panier.component';
 import { SearchFComponent } from './search-f/search-f.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Navbar2Component } from './navbar2/navbar2.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,12 +25,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AddfoodComponent,
     PanierComponent,
     SearchFComponent,
-    HomeComponent
+    HomeComponent,
+    Navbar2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
