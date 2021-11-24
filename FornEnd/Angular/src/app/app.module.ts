@@ -13,8 +13,6 @@ import { PanierComponent } from './panier/panier.component';
 import { SearchFComponent } from './search-f/search-f.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Navbar2Component } from './navbar2/navbar2.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -25,14 +23,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AddfoodComponent,
     PanierComponent,
     SearchFComponent,
-    HomeComponent,
-    Navbar2Component
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
