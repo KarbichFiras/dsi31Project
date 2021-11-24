@@ -1,0 +1,77 @@
+[33mcommit 046116f6dbdb80ef50475a975179aee627d31891[m
+Merge: d4a0435 81779f2
+Author: KarbichFiras <80693397+KarbichFiras@users.noreply.github.com>
+Date:   Wed Nov 24 11:24:59 2021 +0100
+
+    Merge pull request #3 from KarbichFiras/firaskarbich
+    
+    add toolbar (navbar2) using angular material
+
+[33mcommit 81779f2666faa6f05d74c6709716f462bdd18f63[m[33m ([m[1;31morigin/firaskarbich[m[33m, [m[1;32mfiraskarbich[m[33m)[m
+Author: KarbichFiras <firaskarbich@gmail.com>
+Date:   Wed Nov 24 11:23:11 2021 +0100
+
+    add toolbar (navbar2) using angular material
+
+[33mcommit d4a0435fc3724382e1a56d87e29f483d3fa5bac4[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: KarbichFiras <firaskarbich@gmail.com>
+Date:   Wed Nov 24 10:30:17 2021 +0100
+
+    added angular material
+
+[33mcommit 53ca66e718058425025a8d480746d4da205ce8a4[m
+Merge: 8538194 cfa471d
+Author: KarbichFiras <80693397+KarbichFiras@users.noreply.github.com>
+Date:   Wed Nov 24 10:05:43 2021 +0100
+
+    Merge pull request #2 from KarbichFiras/ihebessaied
+    
+    Ihebessaied
+
+[33mcommit cfa471dffe0d7df7924b440fb5dcda2c5f6628b9[m[33m ([m[1;31morigin/ihebessaied[m[33m)[m
+Author: ihebessaied <i.essaied@yahoo.fr>
+Date:   Mon Nov 15 00:35:05 2021 +0100
+
+    add 404 not found component
+
+[33mcommit edb5d1f5dbd2e6d017ca650964483aa4cfa0a496[m
+Author: ihebessaied <i.essaied@yahoo.fr>
+Date:   Sun Nov 14 23:34:12 2021 +0100
+
+    add template home css won't integrate with angular
+
+[33mcommit 8538194c926fe7aae523af4ef9e6f6386e4fd89f[m
+Author: KarbichFiras <firaskarbich@gmail.com>
+Date:   Sun Nov 14 15:10:06 2021 +0100
+
+    home component
+
+[33mcommit bfd84ce608401cd29fb2e39cd789dfac7bac6e56[m
+Author: KarbichFiras <firaskarbich@gmail.com>
+Date:   Sun Nov 7 23:32:20 2021 +0100
+
+    angular integration
+
+[33mcommit 2a0118d4eb7af9272b91eb7d300a5d3e04b3ba4c[m
+Author: KarbichFiras <firaskarbich@gmail.com>
+Date:   Sun Nov 7 23:18:49 2021 +0100
+
+    food & extras
+
+[33mcommit 0e0fe480120984e7ab6cdac02d7d7fb1ca78682a[m
+Author: bechahedfiras <firas_bechahed@hotmail.com>
+Date:   Sun Nov 7 22:59:54 2021 +0100
+
+    3 classes Added: commande,factureclass,qtcommande
+
+[33mcommit 1e3a778a6a6f9ee74203c6ff7609cc65d0dbbe6d[m
+Author: ihebessaied <i.essaied@yahoo.fr>
+Date:   Sun Nov 7 22:57:22 2021 +0100
+
+     add persone class
+
+[33mcommit 2f684693a2eb28dd92c90d83bab1e4b826818462[m
+Author: KarbichFiras <firaskarbich@gmail.com>
+Date:   Sun Nov 7 22:45:04 2021 +0100
+
+    what ever
