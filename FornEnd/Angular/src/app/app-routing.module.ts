@@ -8,6 +8,7 @@ import { HomeComponent } from "./home/home.component";
 import { NotfoundComponent } from './notfound/notfound.component' 
 
   const routes : Routes =[
+      { path: '',   redirectTo: 'payments', pathMatch: 'full' },
       {path :"home" , component : HomeComponent },
       {path :"payments" , component : PaymentsComponent },
       {path :"addfood" , component : AddfoodComponent },
