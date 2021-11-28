@@ -14,6 +14,7 @@ import { NotfoundComponent } from './notfound/notfound.component'
       {path :"addfood" , component : AddfoodComponent },
       {path :"panier" , component : PanierComponent },
       {path :"searchForSpecificFood" , component: SearchFComponent },
+      { path: 'authentication', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
       {path :"**" , component: NotfoundComponent },
       
     ];
