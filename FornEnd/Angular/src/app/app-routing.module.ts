@@ -16,6 +16,7 @@ import { NotfoundComponent } from './notfound/notfound.component'
       {path :"searchForSpecificFood" , component: SearchFComponent },
       { path: 'authentication', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
       { path: 'Restaurants', loadChildren: () => import('./restaurants/restaurants.module').then(m => m.RestaurantsModule) },
+      { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
       {path :"**" , component: NotfoundComponent },
       
     ];
