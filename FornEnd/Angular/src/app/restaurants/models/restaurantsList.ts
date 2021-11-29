@@ -1,6 +1,6 @@
 import { Restaurant } from './restaurant';
 
-export const RESTAURANTS : Restaurant[]=[
+export const RESTAURANTS : Restaurant[] = [
     {
         code : "1",
         adresse : "Bizerte",    
