@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h2 style="text-align:center;margin-top:20px">Restaurants</h2>
+    <h2 style="text-align:center;margin-top:20px">{{restaurant.name|titlecase}} Details </h2>
    
     <table class="table" style="text-align:center;font-size: 18px;">
         <thead>
@@ -11,7 +11,6 @@
             <th scope="col">enabled</th>
             <th scope="col">name</th>
             <th scope="col">image_code</th>
-            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -22,11 +21,6 @@
             <td>{{restaurant.enabled}}</td>
             <td>{{restaurant.name}}</td>
             <td>{{restaurant.image_code}}</td>
-            <td>
-
-                <button type="button" class="btn btn-info"  >Details</button>
-
-            </td>
         </tr>
         </tbody>
     </table>
