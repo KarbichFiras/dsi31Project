@@ -1,1 +1,35 @@
-<p>user works!</p>
+<div class="container">
+
+    <h2 style="text-align:center;margin-top:20px">users</h2>
+   
+    <table class="table" style="text-align:center;font-size: 18px;">
+        <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">nom</th>
+            <th scope="col">prenom</th>
+            <th scope="col">date_naissance</th>
+            <th scope="col">adresse</th>
+            <th scope="col">tel</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.nom}}</td>
+            <td>{{user.prenom}}</td>
+            <td>{{user.date_naissance}}</td>
+            <td>{{user.adresse}}</td>
+            <td>{{user.tel}}</td>
+            <td>
+
+                <button type="button" class="getstarted scrollto">Details</button>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
