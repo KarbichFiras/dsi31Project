@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RESTAURANTS } from '../models/restaurantsList';
 
 @Component({
   selector: 'app-all',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllComponent implements OnInit {
 
+  restaurants = RESTAURANTS;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getRestaurants():typeof RESTAURANTS{
+    return this.restaurants;
   }
 
 }
