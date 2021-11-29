@@ -8,22 +8,17 @@
             <th scope="col">id</th>
             <th scope="col">nom</th>
             <th scope="col">prenom</th>
-            <th scope="col">date_naissance</th>
-            <th scope="col">adresse</th>
-            <th scope="col">tel</th>
+            <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let user of users">
             <td>{{user.id}}</td>
             <td>{{user.nom}}</td>
-            <td>{{user.prenom}}</td>
-            <td>{{user.date_naissance}}</td>
-            <td>{{user.adresse}}</td>
-            <td>{{user.tel}}</td>
+            <td>{{user.prenom}}</td>       
             <td>
 
-                <button type="button" class="getstarted scrollto">Details</button>
+                <a type="button" routerLink="/admin/detailuser/{{user.id}}" class="btn btn-info getstarted scrollto">Details</a>
 
             </td>
         </tr>
