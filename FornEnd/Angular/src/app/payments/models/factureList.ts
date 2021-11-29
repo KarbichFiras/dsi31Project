@@ -1,6 +1,6 @@
 import { Facture } from './facture';
 
-export const RESTAURANTS : Facture[]=[
+export const FACTURES : Facture[]=[
     {
         code_fac : "1",
         mode_paimenent : "Main a main",    
