@@ -13,11 +13,7 @@ export class AllComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.getRestaurants();
   }
 
-  getRestaurants():typeof RESTAURANTS{
-    return this.restaurants;
-  }
 
 }
