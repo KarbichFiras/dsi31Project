@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h2 style="text-align:center;margin-top:20px">users</h2>
+    <h2 style="text-align:center;margin-top:20px">{{user.nom}} &nbsp; Details</h2>
    
     <table class="table" style="text-align:center;font-size: 18px;">
         <thead>
@@ -8,19 +8,20 @@
             <th scope="col">id</th>
             <th scope="col">nom</th>
             <th scope="col">prenom</th>
-            <th scope="col">Action</th>
+            <th scope="col">date_naissance</th>
+            <th scope="col">adresse</th>
+            <th scope="col">tel</th>
         </tr>
         </thead>
         <tbody>
         <tr *ngFor="let user of users">
             <td>{{user.id}}</td>
             <td>{{user.nom}}</td>
-            <td>{{user.prenom}}</td>       
-            <td>
-
-                <a type="button" routerLink="/admin/detailuser/{{user.id}}" class="btn btn-info getstarted scrollto">Details</a>
-
-            </td>
+            <td>{{user.prenom}}</td>
+            <td>{{user.date_naissance}}</td>
+            <td>{{user.adresse}}</td>
+            <td>{{user.tel}}</td>
+ 
         </tr>
         </tbody>
     </table>
