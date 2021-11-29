@@ -1,35 +1,13 @@
-<div class="container">
 
-    <h2 style="text-align:center;margin-top:20px">Restaurants</h2>
-   
-    <table class="table" style="text-align:center;font-size: 18px;">
-        <thead>
-        <tr>
-            <th scope="col">code</th>
-            <th scope="col">adresse</th>
-            <th scope="col">email</th>
-            <th scope="col">enabled</th>
-            <th scope="col">name</th>
-            <th scope="col">image_code</th>
-            <th scope="col">Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let restaurant of restaurants">
-            <td>{{restaurant.code}}</td>
-            <td>{{restaurant.adresse}}</td>
-            <td>{{restaurant.email}}</td>
-            <td>{{restaurant.enabled}}</td>
-            <td>{{restaurant.name}}</td>
-            <td>{{restaurant.image_code}}</td>
-            <td>
+<div class="row" style="row-gap: 20px; column-gap: 20px; margin-top:20px; margin-left:20px ; align-items:center">
 
-                <button type="button" class="btn btn-info" routerLink="/restaurants/restaurantDetails/{{restaurant.code}}" >Details</button>
-
-            </td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="card" style="width: 18rem;" *ngFor="let restaurant of restaurants">
+        <img src="../../assets/img/restauImage.jpg" class="card-img-top" alt="..." >
+        <div class="card-body container">
+          <h5 class="card-title" style="text-align: center;">{{restaurant.name|titlecase}}</h5>
+          <p class="card-text">Mekletna bnina barcha , wndifa juste titsamim wkhw order now fech testana </p>
+          <a class="btn btn-primary col-md-12 text-center" routerLink="/restaurants/restaurantDetails/{{restaurant.code}}" >Info</a>
+        </div>
+    </div>
 
 </div>
-
