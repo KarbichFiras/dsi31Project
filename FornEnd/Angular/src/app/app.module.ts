@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 
 
-import { PaymentsComponent } from './payments/payments.component';
+
 import { AddfoodComponent } from './addfood/addfood.component';
 import { PanierComponent } from './panier/panier.component';
 import { SearchFComponent } from './search-f/search-f.component';
@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     NavbarComponent,
-    PaymentsComponent,
+    
     AddfoodComponent,
     PanierComponent,
     SearchFComponent,
