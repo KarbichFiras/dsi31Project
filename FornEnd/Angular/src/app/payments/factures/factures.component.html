@@ -1,1 +1,24 @@
-<p>factures works!</p>
+<div class="container">
+
+    <h2 style="text-align:center;margin-top:20px">factures</h2>
+   
+    <table class="table" style="text-align:center;font-size: 18px;">
+        <thead>
+        <tr>
+            <th scope="col">code_fac</th>
+            <th scope="col">mode_paimenent</th>
+            <th scope="col">total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let facture of factures">
+            <td>{{facture.code_fac}}</td>
+            <td>{{facture.mode_paimenent}}</td>
+            <td>{{facture.total}}</td>
+            <td>
+                <a type="button" routerLink="" class="btn btn-info getstarted scrollto">Details</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
