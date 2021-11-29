@@ -1,5 +1,5 @@
-import { user } from "./user-model";
-        export const users: user[] = [
+import { User } from "./user-model";
+        export const Users: User[] = [
             {
                 id:"fsgsdgsdg687",
                 nom:"ihrb",
