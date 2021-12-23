@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RESTAURANTS } from '../models/restaurantsList';
+import { RestaurantsService } from '../../Services/restaurants.service'
 
 @Component({
   selector: 'app-all',
@@ -9,10 +10,14 @@ import { RESTAURANTS } from '../models/restaurantsList';
 export class AllComponent implements OnInit {
 
   restaurants = RESTAURANTS;
+  R : any;
 
-  constructor() { }
+  constructor(private restaurantsService : RestaurantsService) { }
 
   ngOnInit(): void {
+    this.restaurantsService.getRestaurants().subscribe(data => {
+      this.R = data;
+    });
   }
 
 

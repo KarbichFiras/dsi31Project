@@ -13,8 +13,8 @@ import { PanierComponent } from './panier/panier.component';
 import { SearchFComponent } from './search-f/search-f.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import { HttpClientModule } from '@angular/common/http';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
