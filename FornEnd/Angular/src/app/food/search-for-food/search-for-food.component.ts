@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FOOD } from '../models/food-list';
+import{ AddFoodsService } from '../../Services/add-foods.service'
+import { Food } from '../models/food';
 
 @Component({
   selector: 'app-search-for-food',
@@ -8,11 +9,17 @@ import { FOOD } from '../models/food-list';
 })
 export class SearchForFoodComponent implements OnInit {
 
-  foods = FOOD;
+  foods : any;
   
-  constructor() { }
+  constructor(private addfoodsservice:AddFoodsService) { }
 
   ngOnInit(): void {
+ this.getAllFoods();
   }
 
+  getAllFoods(){
+ this.addfoodsservice.getAllFoods().subscribe(data=>{
+     this.foods = data;
+   });
+  }
 }
