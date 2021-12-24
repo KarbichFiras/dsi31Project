@@ -2,29 +2,8 @@
 
     <h2 style="text-align:center;margin-top:20px">users</h2>
    
-    <table class="table" style="text-align:center;font-size: 18px;">
-        <thead>
-        <tr>
-            <th scope="col">id</th>
-            <th scope="col">nom</th>
-            <th scope="col">prenom</th>
-            <th scope="col">Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let user of users">
-            <td>{{user.id}}</td>
-            <td>{{user.nom}}</td>
-            <td>{{user.prenom}}</td>       
-            <td>
-
-                <a type="button" routerLink="/admin/detailuser/{{user.id}}" class="btn btn-info getstarted scrollto">Details</a>
-
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
+    
+<h1>{{users | json }}</h1>
 </div>
 
 
