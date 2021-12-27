@@ -15,6 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './categories/categories.component';
+import { CategoriesService } from './Services/categories.service';
  
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { CategoriesComponent } from './categories/categories.component';
     SearchFComponent,
     HomeComponent,
     CategoriesComponent
+    
   ],
   imports: [
     HttpClientModule,
@@ -33,7 +35,7 @@ import { CategoriesComponent } from './categories/categories.component';
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [CategoriesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
