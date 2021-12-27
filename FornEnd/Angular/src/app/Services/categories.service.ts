@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,20 @@ import { Injectable } from '@angular/core';
 })
 export class CategoriesService {
 
-  constructor() { }
+  constructor(private http :HttpClient) { }
+  getAllCategories(){
+    //return this.http.get("http://localhost:8079/getAllCategorie")
+    const categorie = [
+          {
+            code : "1", 
+            name : "sandwish",
+          },
+          {
+            code : "2", 
+            name : "plat",
+          }
+      ]
+      return categorie;
+      
+  }
 }
