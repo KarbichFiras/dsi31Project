@@ -7,14 +7,19 @@ import { SearchFComponent } from "./search-f/search-f.component"
 import { HomeComponent } from "./home/home.component";
 import { NotfoundComponent } from './notfound/notfound.component' 
 import { CategoriesComponent } from './categories/categories.component';
-  const routes : Routes =[
+import { AddcategoriesComponent } from './categories/addCategories/addcategories.component';  
+import { UpdateCategorieComponent } from './categories/updateCategorie/update-categorie/update-categorie.component';
+const routes : Routes =[
       { path: '',   redirectTo: 'home', pathMatch: 'full' },
       {path :"home" , component : HomeComponent },
       {path :"payments" , component : PaymentsComponent },
       {path :"addfood" , component : AddfoodComponent },
       {path :"panier" , component : PanierComponent },
       {path :"searchForSpecificFood" , component: SearchFComponent },
+      {path :"searchForSpecificFood" , component: SearchFComponent },
       {path :"categorie" , component: CategoriesComponent },
+      {path :"categorie/addcategorie" , component: AddcategoriesComponent },
+      {path :"categorie/updatecategorie" , component: UpdateCategorieComponent },
       { path: 'authentication', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
       { path: 'restaurants', loadChildren: () => import('./restaurants/restaurants.module').then(m => m.RestaurantsModule) },
       { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },

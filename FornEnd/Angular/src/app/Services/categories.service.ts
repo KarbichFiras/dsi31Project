@@ -22,4 +22,7 @@ export class CategoriesService {
       return categorie;*/
       
   }
+  getCategorie(){
+    return this.http.get("https://jsonplaceholder.typicode.com/todos/1");
+  }
 }
