@@ -6,7 +6,7 @@ import {PanierComponent} from "./panier/panier.component";
 import { SearchFComponent } from "./search-f/search-f.component" 
 import { HomeComponent } from "./home/home.component";
 import { NotfoundComponent } from './notfound/notfound.component' 
-
+import { CategoriesComponent } from './categories/categories.component';
   const routes : Routes =[
       { path: '',   redirectTo: 'home', pathMatch: 'full' },
       {path :"home" , component : HomeComponent },
@@ -14,6 +14,7 @@ import { NotfoundComponent } from './notfound/notfound.component'
       {path :"addfood" , component : AddfoodComponent },
       {path :"panier" , component : PanierComponent },
       {path :"searchForSpecificFood" , component: SearchFComponent },
+      {path :"categorie" , component: CategoriesComponent },
       { path: 'authentication', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
       { path: 'restaurants', loadChildren: () => import('./restaurants/restaurants.module').then(m => m.RestaurantsModule) },
       { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },

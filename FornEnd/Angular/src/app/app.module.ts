@@ -14,6 +14,7 @@ import { SearchFComponent } from './search-f/search-f.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { CategoriesComponent } from './categories/categories.component';
  
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddfoodComponent,
     PanierComponent,
     SearchFComponent,
-    HomeComponent
+    HomeComponent,
+    CategoriesComponent
   ],
   imports: [
     HttpClientModule,
