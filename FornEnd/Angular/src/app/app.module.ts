@@ -21,6 +21,8 @@ import { AddcategoriesService } from './Services/addcategories.service';
 import { UpdateCategorieComponent } from './categories/updateCategorie/update-categorie/update-categorie.component';
 import { UpdateCategorieService } from './Services/update-categorie.service';
 import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
+import { UsersService } from './Services/users.service';
+
  
 @NgModule({
   declarations: [
@@ -36,7 +38,6 @@ import { DeleteCategorieComponent } from './categories/delete-categorie/delete-c
     UpdateCategorieComponent,
     DeleteCategorieComponent,
     
-    
   ],
   imports: [
     HttpClientModule,
@@ -44,7 +45,7 @@ import { DeleteCategorieComponent } from './categories/delete-categorie/delete-c
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [CategoriesService,AddcategoriesService,UpdateCategorieService],
+  providers: [CategoriesService,AddcategoriesService,UpdateCategorieService,UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

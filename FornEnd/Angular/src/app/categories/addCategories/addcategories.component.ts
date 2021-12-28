@@ -31,7 +31,6 @@ export class AddcategoriesComponent implements OnInit {
       return this.categorie=data;
     },(err)=>{
       console.log("fail to add categorie"+err);
-      
     })
     
     
