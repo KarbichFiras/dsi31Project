@@ -9,6 +9,7 @@ import { NotfoundComponent } from './notfound/notfound.component'
 import { CategoriesComponent } from './categories/categories.component';
 import { AddcategoriesComponent } from './categories/addCategories/addcategories.component';  
 import { UpdateCategorieComponent } from './categories/updateCategorie/update-categorie/update-categorie.component';
+import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
 const routes : Routes =[
       { path: '',   redirectTo: 'home', pathMatch: 'full' },
       {path :"home" , component : HomeComponent },
@@ -20,6 +21,7 @@ const routes : Routes =[
       {path :"categorie" , component: CategoriesComponent },
       {path :"categorie/addcategorie" , component: AddcategoriesComponent },
       {path :"categorie/updatecategorie" , component: UpdateCategorieComponent },
+      {path :"categorie/deletecategorie" , component: DeleteCategorieComponent },
       { path: 'authentication', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
       { path: 'restaurants', loadChildren: () => import('./restaurants/restaurants.module').then(m => m.RestaurantsModule) },
       { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
