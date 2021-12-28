@@ -18,7 +18,9 @@ export class UpdateCategorieComponent implements OnInit {
     const body ={
       title: 'updated title categorie',
     };
-    this.MyupdateCategorie.updateCategorie(body).subscribe(data =>{
+    this.MyupdateCategorie.updateCategorie(body,1).subscribe(data =>{
+      console.log(data);
+      
       this.isCategoriesAdded  =true;
       return this.categorie=data;
      /* this.Mycategorie.getCategorie().subscribe(dataGet => {

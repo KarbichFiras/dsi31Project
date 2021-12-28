@@ -7,10 +7,10 @@ import { Injectable } from '@angular/core';
 export class UpdateCategorieService {
 
   constructor(private http : HttpClient) { }
-  updateCategorie(body){
+  updateCategorie(body,id){
     const putParams = new HttpParams().set('id','id')
     
-   return  this.http.put('https://jsonplaceholder.typicode.com/todos/1',body,{params :putParams})
+   return  this.http.put('https://jsonplaceholder.typicode.com/todos/'+id,body,{params :putParams})
 
   }
 }
