@@ -20,6 +20,7 @@ export class SearchForFoodComponent implements OnInit {
 
   getAllFoods(){
  this.addfoodsservice.getAllFoods().subscribe(data=>{
+ 
      this.foods = data;
    });
   }
