@@ -3,18 +3,18 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class RestaurantService {
+export class SharedRestaurantsService {
 
-  restaurant;
+  restaurants;
 
   constructor() { }
 
-  setRestaurant(restaurant){
-    this.restaurant = restaurant;
+  setRestaurants(restaurants){
+    this.restaurants = restaurants;
   }
 
-  getRestaurant(){
-    return this.restaurant;
+  getRestaurants(){
+    return this.restaurants;
   }
 
 }
