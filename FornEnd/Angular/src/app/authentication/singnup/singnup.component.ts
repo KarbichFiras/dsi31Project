@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm, NgModel } from '@angular/forms';
 import{  SignupService } from '../../Services/Apis/signup.service';
 @Component({
@@ -8,24 +8,26 @@ import{  SignupService } from '../../Services/Apis/signup.service';
 })
 export class SingnupComponent implements OnInit {
 
-  userForm;
+  signupForm;
+  username;
+  email;
+  password;
+  acceptedTerms;
 
   constructor(private signupService:SignupService) { }
 
   ngOnInit(): void {
-      
+    
   }
 
-  signUp(){
+  signup(form:NgForm){
 
-    console.log("sign u p method tregered !")
-    
     const postBody={
-      username : "testUsername",
-      email : "testEmail",
-      password : "12345"
+      username : form.value.username,
+      email : form.value.email,
+      password : form.value.password
     }
-
+    
     this.signupService.addUser(postBody).subscribe(
       (data)=>{
         if(data == null){
@@ -39,6 +41,7 @@ export class SingnupComponent implements OnInit {
         console.log("Failed to sign you up! please try again later");
       }
     );
+
 
   }
 
