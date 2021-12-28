@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RESTAURANTS } from '../models/restaurantsList';
-import { RestaurantsService } from '../../Services/restaurants.service'
-
+import { RestaurantsService } from '../../Services/Apis/restaurants.service'
+import { SharedRestaurantsService } from '../../Services/Shared/restaurant.service'
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
@@ -9,16 +9,18 @@ import { RestaurantsService } from '../../Services/restaurants.service'
 })
 export class AllComponent implements OnInit {
 
-  restaurants = RESTAURANTS;
-  R : any;
+  restaurants;
 
-  constructor(private restaurantsService : RestaurantsService) { }
-
+  constructor(private restaurantsService : RestaurantsService, private sharedRestaurantsService:SharedRestaurantsService) { }
+  
   ngOnInit(): void {
-    this.restaurantsService.getRestaurants().subscribe(data => {
-      this.R = data;
-    });
+    this.getRestaurants(); 
   }
 
-
+  getRestaurants() {
+    this.restaurantsService.getRestaurants().subscribe((data) => {
+      this.restaurants = data;
+      this.sharedRestaurantsService.setRestaurants(data);
+    });
+  }
 }

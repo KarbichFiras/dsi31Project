@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SingnupComponent } from './singnup.component';
+import { DeleteCategorieComponent } from './delete-categorie.component';
 
-describe('SingnupComponent', () => {
-  let component: SingnupComponent;
-  let fixture: ComponentFixture<SingnupComponent>;
+describe('DeleteCategorieComponent', () => {
+  let component: DeleteCategorieComponent;
+  let fixture: ComponentFixture<DeleteCategorieComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SingnupComponent ]
+      declarations: [ DeleteCategorieComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SingnupComponent);
+    fixture = TestBed.createComponent(DeleteCategorieComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,10 +1,15 @@
 
-<h2 style="text-align:center;margin-top:20px">foods</h2> 
-<h1>{{foods | json }}</h1>
- <!-- mahabich yafichi b zina  -->
- <!-- <ul *ngFor="let food of foods">
-    <li> {{food.name}} </li>
- </ul>  -->
+<div>
+  <h2 style="text-align:center;margin-top:20px">foods</h2> 
+  <h1>{{foods | json }}</h1>
 
+
+
+
+  <button (click)="addFood()" class="btn btn-info getstarted scrollto">add Food(Consol)</button>
+  <button (click)="updateFood()" class="btn btn-info getstarted scrollto">Updated Food(Consol)</button>
+  <button (click)="deleteFood()" class="btn btn-info getstarted scrollto">Delete Food(Consol)</button>
+  
+</div>
 
 
