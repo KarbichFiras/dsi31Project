@@ -1,5 +1,5 @@
 <p *ngIf="isCategoriesAdded" class="bg-success">added successefuly</p>
-<button (click)="addCategorie()">add categorie</button>
+<button (click)="addCategorie()" class="btn btn-secondary">add categorie</button>
 <div class="card" style="width: 18rem;" *ngIf="isCategoriesAdded">
     <div class="card-body container">
 <h5 class="card-title" style="text-align: center;">{{categorie.title}}</h5>
