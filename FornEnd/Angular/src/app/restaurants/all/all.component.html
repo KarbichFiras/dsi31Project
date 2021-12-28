@@ -15,7 +15,13 @@
 </div>
 
 <div>
-      
+       
+  <div *ngFor="let r of R">
+
+      <h2> {{ r.name }} </h2>
+
+  </div>
+
   <h3>{{ R | json }}</h3>
 
 </div>
