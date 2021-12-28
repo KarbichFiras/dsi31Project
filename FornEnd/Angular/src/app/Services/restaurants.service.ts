@@ -10,9 +10,7 @@ export class RestaurantsService {
 
   getRestaurants(){
 
-    const headers = new HttpHeaders().set("Authorization","Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ6ZWQiLCJleHAiOjE2NDEwNTQxMDN9.F5x5DlGScvE4my1SGVc5AlTNMfbsrL96qcNLnrS9a-2Nq_yYKIScAqr-jyUCxiH5E-UslBkQQWlNjL08N7FUYQ");
-
-    return this.http.get('https://localhost:8079/getAllRestaurants', {headers, responseType: 'text' as 'json'});
+    return this.http.get('http://localhost:8081/getAllRestaurants');
 
       /*const restaurants = [
           {
