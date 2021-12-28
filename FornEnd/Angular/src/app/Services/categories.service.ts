@@ -8,8 +8,8 @@ export class CategoriesService {
 
   constructor(private http :HttpClient) { }
   getAllCategories(){
-    //return this.http.get("http://localhost:8079/getAllCategorie")
-    const categorie = [
+    return this.http.get("https://jsonplaceholder.typicode.com/todos")
+   /* const categorie = [
           {
             code : "1", 
             name : "sandwish",
@@ -19,7 +19,10 @@ export class CategoriesService {
             name : "plat",
           }
       ]
-      return categorie;
+      return categorie;*/
       
+  }
+  getCategorie(){
+    return this.http.get("https://jsonplaceholder.typicode.com/todos/1");
   }
 }

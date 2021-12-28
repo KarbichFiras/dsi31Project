@@ -16,6 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesService } from './Services/categories.service';
+import { AddcategoriesComponent } from './categories/addCategories/addcategories.component';
+import { AddcategoriesService } from './Services/addcategories.service';
+import { UpdateCategorieComponent } from './categories/updateCategorie/update-categorie/update-categorie.component';
+import { UpdateCategorieService } from './Services/update-categorie.service';
+import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
  
 @NgModule({
   declarations: [
@@ -26,7 +31,11 @@ import { CategoriesService } from './Services/categories.service';
     PanierComponent,
     SearchFComponent,
     HomeComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    AddcategoriesComponent,
+    UpdateCategorieComponent,
+    DeleteCategorieComponent,
+    
     
   ],
   imports: [
@@ -35,7 +44,7 @@ import { CategoriesService } from './Services/categories.service';
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [CategoriesService],
+  providers: [CategoriesService,AddcategoriesService,UpdateCategorieService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
