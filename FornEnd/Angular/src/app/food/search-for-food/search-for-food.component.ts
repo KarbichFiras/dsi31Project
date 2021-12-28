@@ -50,6 +50,12 @@ this.addfoodsservice.addFood(body).subscribe(data=>{
             });
         }
 
+        deleteFood(){
+          this.addfoodsservice.deleteFood(1).subscribe(data =>{
+            console.log("delete food succesfully");
+            });
+        }
+
 
 
 

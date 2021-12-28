@@ -16,4 +16,7 @@ addFood(body){ return this.http.post('https://jsonplaceholder.typicode.com/posts
 
 updateFood(body,id){ return this.http.put('https://jsonplaceholder.typicode.com/posts/'+id,body);}
 
+deleteFood(id){return this.http.delete('https://jsonplaceholder.typicode.com/posts/'+id);
+}
+
 }
