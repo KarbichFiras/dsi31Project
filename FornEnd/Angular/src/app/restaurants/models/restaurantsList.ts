@@ -1,7 +1,7 @@
 import { Restaurant } from './restaurant';
 
 export const RESTAURANTS : Restaurant[] = [
-    {
+   /* {
         code : "1",
         adresse : "Bizerte",    
         email : "restaurant1@gmail.com",
@@ -88,5 +88,5 @@ export const RESTAURANTS : Restaurant[] = [
         enabled : true,
         name : "restaurant11",
         image_code : "11",
-    },
+    },*/
 ]

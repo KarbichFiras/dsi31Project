@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RESTAURANTS } from '../models/restaurantsList';
-import { RestaurantsService } from '../../Services/restaurants.service'
+import { RestaurantsService } from '../../Services/Apis/restaurants.service'
 
 @Component({
   selector: 'app-all',
@@ -9,16 +9,14 @@ import { RestaurantsService } from '../../Services/restaurants.service'
 })
 export class AllComponent implements OnInit {
 
-  restaurants = RESTAURANTS;
-  R : any;
+  restaurants;
 
   constructor(private restaurantsService : RestaurantsService) { }
 
   ngOnInit(): void {
-    this.restaurantsService.getRestaurants().subscribe(data => {
-      this.R = data;
+    this.restaurantsService.getRestaurants().subscribe((data) => {
+      console.log(data);
+      this.restaurants = data;
     });
   }
-
-
 }
