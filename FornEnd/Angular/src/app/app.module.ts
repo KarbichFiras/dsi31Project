@@ -22,6 +22,8 @@ import { UpdateCategorieComponent } from './categories/updateCategorie/update-ca
 import { UpdateCategorieService } from './Services/update-categorie.service';
 import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
 import{ FormsModule } from '@angular/forms';
+import { UsersService } from './Services/users.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,6 @@ import{ FormsModule } from '@angular/forms';
     UpdateCategorieComponent,
     DeleteCategorieComponent,
     
-    
   ],
   imports: [
     FormsModule,
@@ -45,7 +46,7 @@ import{ FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [CategoriesService,AddcategoriesService,UpdateCategorieService],
+  providers: [CategoriesService,AddcategoriesService,UpdateCategorieService,UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -15,11 +15,51 @@ export class SearchForFoodComponent implements OnInit {
 
   ngOnInit(): void {
  this.getAllFoods();
+ 
   }
 
   getAllFoods(){
  this.addfoodsservice.getAllFoods().subscribe(data=>{
+ 
      this.foods = data;
    });
   }
+
+  addFood(){
+    const body = {
+     userId: 3,
+     id: 4,
+     title: "NEw user",
+     body: "sgfrsdgsd" 
+   }
+
+this.addfoodsservice.addFood(body).subscribe(data=>{
+  this.foods = data;
+  console.log("add food succesfully");
+})   
+         }
+
+         updateFood(){
+          const body = {
+            userId: 1,
+         
+            title: "NEw upadated user", 
+            body: "qaerzqaerfzt" 
+           }
+           this.addfoodsservice.updateFood(body,3).subscribe(data =>{
+            console.log("updated food succesfully",body);
+            });
+        }
+
+        deleteFood(){
+          this.addfoodsservice.deleteFood(1).subscribe(data =>{
+            console.log("delete food succesfully");
+            });
+        }
+
+
+
+
+
 }
+

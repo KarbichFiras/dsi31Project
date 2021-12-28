@@ -1,18 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+interface Food{
+  name:string
+  restaurant:string
+  description:string
+  ingredients:string  
+  line1:string
+  line2:string
+  postcode:string
+  country:string
+}
 @Injectable({
   providedIn: 'root'
 })
 export class AddFoodsService {
 
   constructor(private http:HttpClient) { }
-  getAllFoods(){
-    const headers = new HttpHeaders().set('x-rapidapi-host','burgers1.p.rapidapi.com').append('x-rapidapi-key','e95d54291bmshbdf550111cf7290p11769bjsn57aac50bb3e9');
-//call api 
-return this.http.get("https://burgers1.p.rapidapi.com/burgers",{headers, responseType: 'text' as 'json'});
-//stocker les 
 
-     
-      
-  }
+  getAllFoods(){
+
+//call api 
+return this.http.get("https://jsonplaceholder.typicode.com/posts/1");}
+
+
+addFood(body){ return this.http.post('https://jsonplaceholder.typicode.com/posts/',body);}
+
+updateFood(body,id){ return this.http.put('https://jsonplaceholder.typicode.com/posts/'+id,body);}
+
+deleteFood(id){return this.http.delete('https://jsonplaceholder.typicode.com/posts/'+id);
+}
+
 }
