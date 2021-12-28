@@ -21,9 +21,9 @@ import { AddcategoriesService } from './Services/addcategories.service';
 import { UpdateCategorieComponent } from './categories/updateCategorie/update-categorie/update-categorie.component';
 import { UpdateCategorieService } from './Services/update-categorie.service';
 import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
+import{ FormsModule } from '@angular/forms';
 import { UsersService } from './Services/users.service';
 
- 
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +40,7 @@ import { UsersService } from './Services/users.service';
     
   ],
   imports: [
+    FormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
