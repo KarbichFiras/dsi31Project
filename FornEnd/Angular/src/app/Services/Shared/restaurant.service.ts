@@ -5,5 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class RestaurantService {
 
+  restaurant;
+
   constructor() { }
+
+  setRestaurant(restaurant){
+    this.restaurant = restaurant;
+  }
+
+  getRestaurant(){
+    return this.restaurant;
+  }
+
 }
