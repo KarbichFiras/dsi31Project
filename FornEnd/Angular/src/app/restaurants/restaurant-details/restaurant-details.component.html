@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="restaurant != null">
 
     <h2 style="text-align:center;margin-top:20px">{{restaurant.name|titlecase}} Details </h2>
    
@@ -19,7 +19,7 @@
             <td>{{restaurant.email}}</td>
             <td>{{restaurant.name}}</td>
             <td >
-                <ul *ngFor="let menu of restaurant.menus">
+                <ul *ngFor="let menu of restaurant.menus" style="list-style: none;">
                     <li>{{menu.titre}}</li>
                 </ul>
             </td>

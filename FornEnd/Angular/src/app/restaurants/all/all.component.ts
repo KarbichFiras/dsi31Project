@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RESTAURANTS } from '../models/restaurantsList';
 import { RestaurantsService } from '../../Services/Apis/restaurants.service'
 import { SharedRestaurantsService } from '../../Services/Shared/restaurant.service'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
@@ -11,7 +12,7 @@ export class AllComponent implements OnInit {
 
   restaurants;
 
-  constructor(private restaurantsService : RestaurantsService, private sharedRestaurantsService:SharedRestaurantsService) { }
+  constructor(private restaurantsService : RestaurantsService, private sharedRestaurantsService:SharedRestaurantsService, private router:Router) { }
   
   ngOnInit(): void {
     this.getRestaurants(); 
@@ -23,4 +24,9 @@ export class AllComponent implements OnInit {
       this.sharedRestaurantsService.setRestaurants(data);
     });
   }
+
+  getDetails(code: bigint){
+    this.router.navigate(["restaurants/restaurantDetails",code]);
+  }
+
 }

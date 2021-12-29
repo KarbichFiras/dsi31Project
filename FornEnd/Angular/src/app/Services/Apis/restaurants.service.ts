@@ -10,8 +10,12 @@ export class RestaurantsService {
 
   getRestaurants(){
 
-    return this.http.get('http://localhost:8081/getAllRestaurants');
+    return this.http.get('http://localhost:8081/api/restaurants/getAllRestaurants');
 
+  }
+
+  getRestaurant(code: bigint){
+    return this.http.get('http://localhost:8081/api/restaurants/getRestaurantByCode/'+code);
   }
 
 }

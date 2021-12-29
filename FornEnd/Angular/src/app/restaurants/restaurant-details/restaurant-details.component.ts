@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Restaurant } from '../models/restaurant';
-import { RESTAURANTS } from '../models/restaurantsList';
+import { RestaurantsService } from '../../Services/Apis/restaurants.service'
 import { SharedRestaurantsService } from '../../Services/Shared/restaurant.service'
 
 @Component({
@@ -15,11 +14,11 @@ export class RestaurantDetailsComponent implements OnInit {
   restaurants = this.sharedRestaurantsService.getRestaurants();
   restaurant;
   
-  constructor(private route: ActivatedRoute, private sharedRestaurantsService:SharedRestaurantsService) { }
+  constructor(private route: ActivatedRoute, private sharedRestaurantsService:SharedRestaurantsService, private restaurantsService:RestaurantsService) { }
 
   ngOnInit(): void {
       this.getRestaurantCode();
-      this.getRestaurant();
+      this.getRestaurant(this.restaurantCode);
       console.log(this.restaurantCode);
   }
 
@@ -29,12 +28,11 @@ export class RestaurantDetailsComponent implements OnInit {
     })
   }
 
-  getRestaurant(){
-    this.restaurants.forEach( (resteau) =>{
-      if(resteau.code == this.restaurantCode){
-        this.restaurant = resteau;
-      }
-    } );
+  getRestaurant(code: bigint){
+    this.restaurantsService.getRestaurant(code).subscribe(data=>{
+      console.log(data);
+      this.restaurant = data;
+    });
   }
 
 }
