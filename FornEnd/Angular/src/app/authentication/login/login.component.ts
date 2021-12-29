@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       data => {
         // madem d5alna lihna ma3neha famma data raj3et (wmihech error 5ater famma error lout tcatchih) w3malna login bil s7i7
         this.isLoginFailed = false;
-        console.log(data);
+        //console.log(data);
         this.router.navigate([""]);
       },
       error=>{
