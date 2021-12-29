@@ -6,11 +6,9 @@
         <div class="card-body container">
           <h5 class="card-title" style="text-align: center;">{{restaurant.name|titlecase}}</h5>
           <p class="card-text">{{restaurant.description}} </p>
-          <a class="btn btn-primary col-md-9 text-center getstarted" routerLink="/restaurants/restaurantDetails/{{restaurant.code}}" >Info</a>
+          <button (click)="getDetails(restaurant.code)" class="btn btn-primary col-md-9 text-center getstarted" >Details</button>
         </div>
     </div>
-
-   
 
 </div>
 
