@@ -19,7 +19,7 @@ export class RestaurantDetailsComponent implements OnInit {
   ngOnInit(): void {
       this.getRestaurantCode();
       this.getRestaurant(this.restaurantCode);
-      console.log(this.restaurantCode);
+      //console.log(this.restaurantCode);
   }
 
   getRestaurantCode() {
@@ -30,7 +30,7 @@ export class RestaurantDetailsComponent implements OnInit {
 
   getRestaurant(code: bigint){
     this.restaurantsService.getRestaurant(code).subscribe(data=>{
-      console.log(data);
+      //console.log(data);
       this.restaurant = data;
     });
   }

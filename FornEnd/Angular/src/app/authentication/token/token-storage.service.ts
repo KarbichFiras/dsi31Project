@@ -15,7 +15,7 @@ export class TokenStorageService {
 
   public saveToken(token: string){
     // delete if exists
-    window.sessionStorage.removeItem(TOKEN_KEY);
+    this.removeToken();
     // save the token
     window.sessionStorage.setItem(TOKEN_KEY, token);
   }
@@ -29,7 +29,7 @@ export class TokenStorageService {
 
   public saveUsername(username: string){
     // delete if exists
-    window.sessionStorage.removeItem(USERNAME_KEY);
+    this.removeUsername();
     // save the username
     window.sessionStorage.setItem(USERNAME_KEY, username);
   }
@@ -40,7 +40,7 @@ export class TokenStorageService {
 
   public saveAuthorities(authorities: string[]){
     // delete if exists
-    window.sessionStorage.removeItem(AUTHORITIES_KEY);
+    this.removeAuthorities();
     // save the authorities
     window.sessionStorage.setItem(AUTHORITIES_KEY, JSON.stringify(authorities) );
   }
@@ -55,4 +55,15 @@ export class TokenStorageService {
     return this.roles;
   }
 
+  removeToken(){
+    window.sessionStorage.removeItem(TOKEN_KEY);
+  }
+
+  removeUsername(){
+    window.sessionStorage.removeItem(USERNAME_KEY);
+  }
+
+  removeAuthorities(){
+    window.sessionStorage.removeItem(AUTHORITIES_KEY);
+  }
 }

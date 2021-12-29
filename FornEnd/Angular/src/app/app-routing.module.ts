@@ -10,23 +10,23 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AddcategoriesComponent } from './categories/addCategories/addcategories.component';  
 import { UpdateCategorieComponent } from './categories/updateCategorie/update-categorie/update-categorie.component';
 import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
-import { AuthGuardService } from './Services/Guards/auth-guard.service';
+import { AuthGuardService as AuthGuard } from './Services/Guards/auth-guard.service';
 const routes : Routes =[
 
       { path: '',   redirectTo: 'home', pathMatch: 'full' },
       {path :"home" , component : HomeComponent },
-      {path :"payments" , component : PaymentsComponent, canActivate:[AuthGuardService] },
-      {path :"addfood" , component : AddfoodComponent },
-      {path :"panier" , component : PanierComponent },
+      {path :"payments" , component : PaymentsComponent},
+      {path :"addfood" , component : AddfoodComponent , canActivate:[AuthGuard] },
+      {path :"panier" , component : PanierComponent , canActivate:[AuthGuard] },
       {path :"searchForSpecificFood" , component: SearchFComponent },
       {path :"searchForSpecificFood" , component: SearchFComponent },
       {path :"categorie" , component: CategoriesComponent },
-      {path :"categorie/addcategorie" , component: AddcategoriesComponent },
-      {path :"categorie/updatecategorie" , component: UpdateCategorieComponent },
-      {path :"categorie/deletecategorie" , component: DeleteCategorieComponent },
+      {path :"categorie/addcategorie" , component: AddcategoriesComponent , canActivate:[AuthGuard] },
+      {path :"categorie/updatecategorie" , component: UpdateCategorieComponent , canActivate:[AuthGuard] },
+      {path :"categorie/deletecategorie" , component: DeleteCategorieComponent , canActivate:[AuthGuard] },
       { path: 'authentication', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
       { path: 'restaurants', loadChildren: () => import('./restaurants/restaurants.module').then(m => m.RestaurantsModule) },
-      { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+      { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) , canActivate:[AuthGuard] },
       { path: 'payments', loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
       { path: 'food', loadChildren: () => import('./food/food.module').then(m => m.FoodModule) },
       {path :"**" , component: NotfoundComponent },
