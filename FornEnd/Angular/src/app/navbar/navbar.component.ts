@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
 
   logout(){
     this.loginService.deleteUserData();
-    this.router.navigate([""]);
+    this.router.navigate(['authentication/login']);
   }
 
 }

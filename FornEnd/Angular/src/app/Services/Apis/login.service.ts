@@ -65,10 +65,7 @@ export class LoginService {
 
   public isAuthenticated(): boolean {
     // Check whether the id_token is expired or not
-    console.log("isAuthenticated token is : " + this.token);
-    return !jwtHelper.isTokenExpired(this.token);
-   
-   return false;
+   return !jwtHelper.isTokenExpired(this.token);
   }
 
 }
