@@ -26,7 +26,7 @@ const routes : Routes =[
       {path :"categorie/deletecategorie" , component: DeleteCategorieComponent , canActivate:[AuthGuard] },
       { path: 'authentication', loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule) },
       { path: 'restaurants', loadChildren: () => import('./restaurants/restaurants.module').then(m => m.RestaurantsModule) },
-      { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) , canActivate:[AuthGuard] },
+      { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
       { path: 'payments', loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
       { path: 'food', loadChildren: () => import('./food/food.module').then(m => m.FoodModule) },
       {path :"**" , component: NotfoundComponent },
