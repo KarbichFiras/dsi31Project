@@ -21,6 +21,9 @@ export class TokenStorageService {
   }
 
   public getToken(){
+    if(sessionStorage.getItem(TOKEN_KEY) == null){
+      return "";
+    }
     return sessionStorage.getItem(TOKEN_KEY);
   }
 

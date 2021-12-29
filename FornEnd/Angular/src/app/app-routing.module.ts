@@ -10,10 +10,12 @@ import { CategoriesComponent } from './categories/categories.component';
 import { AddcategoriesComponent } from './categories/addCategories/addcategories.component';  
 import { UpdateCategorieComponent } from './categories/updateCategorie/update-categorie/update-categorie.component';
 import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
+import { AuthGuardService } from './Services/Guards/auth-guard.service';
 const routes : Routes =[
+
       { path: '',   redirectTo: 'home', pathMatch: 'full' },
       {path :"home" , component : HomeComponent },
-      {path :"payments" , component : PaymentsComponent },
+      {path :"payments" , component : PaymentsComponent, canActivate:[AuthGuardService] },
       {path :"addfood" , component : AddfoodComponent },
       {path :"panier" , component : PanierComponent },
       {path :"searchForSpecificFood" , component: SearchFComponent },
