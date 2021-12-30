@@ -5,7 +5,8 @@ import { SearchForFoodComponent } from './search-for-food/search-for-food.compon
 
 const routes: Routes = [
   { path: 'search_for_food', component:SearchForFoodComponent },
-  { path: '', component: FoodComponent }
+  { path: '/:id', component: FoodComponent }
+  // food of this actuel restaurant
 ];
 
 
