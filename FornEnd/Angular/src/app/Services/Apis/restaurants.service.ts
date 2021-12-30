@@ -27,6 +27,5 @@ export class RestaurantsService {
     return this.http.get('http://localhost:8081/api/restaurants/getSpecificRestaurant?partnameResto='+partnameResto);
   }
   getRestaurantByFood(partLibelleFood : string){
-    return this.http.get('http://localhost:8080/RestaurantFoodService/getRestaurantByFood?partLibelleFood='+partLibelleFood);
-  }
+    return this.http.get('http://localhost:8081/api/restaurants/getRestaurantByFood?partLibelleFood='+partLibelleFood);  }
 }
