@@ -24,6 +24,7 @@ import { DeleteCategorieComponent } from './categories/delete-categorie/delete-c
 import{ FormsModule } from '@angular/forms';
 import { UsersService } from './Services/users.service';
 import { AuthInterceptorService } from './Services/Interceptors/auth-interceptor.service';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { AuthInterceptorService } from './Services/Interceptors/auth-interceptor
     AddcategoriesComponent,
     UpdateCategorieComponent,
     DeleteCategorieComponent,
+    CartComponent,
     
   ],
   imports: [
