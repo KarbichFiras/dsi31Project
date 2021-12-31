@@ -21,7 +21,7 @@ export class FoodComponent implements OnInit {
   
 
   constructor(private route: ActivatedRoute, private foodService:FoodService, 
-    private panierService: CartService) { }
+    private cartService: CartService) { }
 
   ngOnInit(): void {
       this.getRestaurantCode();
@@ -32,33 +32,16 @@ export class FoodComponent implements OnInit {
   
   ajouterAuPanier(restoname,foodname){
     
-    //console.log(this.panierService.get());
-
-   /* let map = new Map<string, string>()  
-    map.set(restoname,foodname)  
-    
-    let jsonObject = {};  // equiv to the whole cart
-    
-    map.forEach((value, key) => {  
-      jsonObject[key] = value ;
-    });  
-    
-    console.log(JSON.stringify(jsonObject))  */
-
-
-
-    //localStorage.setItem(PANIER_KEY, "aaa" );
-
-   // this.panierService.addToPanier(data);
+   
 
   }
 
   getRestaurantCode() {
     this.route.params.subscribe(params=>{
       this.restaurantCode = params.code;
-     
       })
   }
+
   getFoodsByRestaurantCode() {
     this.foodService.getFoodExtraCategorie(this.restaurantCode).subscribe(data=>{
      // console.log(data);
