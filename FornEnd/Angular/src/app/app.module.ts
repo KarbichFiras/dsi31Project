@@ -25,6 +25,7 @@ import{ FormsModule } from '@angular/forms';
 import { UsersService } from './Services/users.service';
 import { AuthInterceptorService } from './Services/Interceptors/auth-interceptor.service';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CartComponent } from './cart/cart.component';
     UpdateCategorieComponent,
     DeleteCategorieComponent,
     CartComponent,
+    PaymentComponent,
     
   ],
   imports: [
