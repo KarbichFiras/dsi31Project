@@ -19,9 +19,9 @@ export class AddFoodsService {
   constructor(private http:HttpClient) { }
 
   getAllFoods(){
-
-//call api 
-return this.http.get("https://jsonplaceholder.typicode.com/posts/1");}
+    //call api 
+    return this.http.get("https://jsonplaceholder.typicode.com/posts/1");
+  }
 
 
 addFood(body){ return this.http.post('https://jsonplaceholder.typicode.com/posts/',body);}

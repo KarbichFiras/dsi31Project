@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule , Routes } from '@angular/router';
 import {PaymentsComponent } from "./payments/payments.component";
 import {AddfoodComponent} from "./addfood/addfood.component";
-import {PanierComponent} from "./panier/panier.component";
 import { SearchFComponent } from "./search-f/search-f.component" 
 import { HomeComponent } from "./home/home.component";
 import { NotfoundComponent } from './notfound/notfound.component' 
@@ -18,7 +17,6 @@ const routes : Routes =[
       {path :"home" , component : HomeComponent },
       {path :"payments" , component : PaymentsComponent},
       {path :"addfood" , component : AddfoodComponent , canActivate:[AuthGuard] },
-      {path :"panier" , component : PanierComponent , canActivate:[AuthGuard] }, 
       {path :"cart" , component: CartComponent },
       // {path :"categorie" , component: CategoriesComponent },
       // {path :"categorie/addcategorie" , component: AddcategoriesComponent , canActivate:[AuthGuard] },

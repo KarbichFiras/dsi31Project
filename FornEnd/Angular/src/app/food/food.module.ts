@@ -4,11 +4,13 @@ import { FoodRoutingModule } from './food-routing.module';
 import { FoodComponent } from './food.component';
 import { SearchForFoodComponent } from './search-for-food/search-for-food.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     FoodComponent,
-    SearchForFoodComponent
+    SearchForFoodComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,

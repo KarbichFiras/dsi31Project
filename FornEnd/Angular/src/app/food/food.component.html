@@ -33,7 +33,7 @@
                                     <span>{{foodExtraCateg.tprix}}DT</span>
                                 </div>
                                 <div class="food-card_order-count">
-                                    <div class="input-group mb-3">
+                                    <!--<div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <button class="btn btn-outline-secondary minus-btn" type="button" id="button-addon1"><i class="fa fa-minus"></i></button>
                                         </div>
@@ -41,7 +41,9 @@
                                         <div class="input-group-append">
                                             <button class="btn btn-outline-secondary add-btn" type="button" id="button-addon1"><i class="fa fa-plus"></i></button>
                                         </div>
-                                    </div>
+                                    </div>-->
+                                    <button [routerLink]="['product', foodExtraCateg.libelle]" >Info</button>
+                                    <button (click)="ajouterAuPanier(restoname,foodExtraCateg.libelle)" >Ajouter Panier</button>
                                 </div>
                             </div>
                         </div>

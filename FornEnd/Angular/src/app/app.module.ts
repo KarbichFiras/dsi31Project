@@ -9,7 +9,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 
 import { AddfoodComponent } from './addfood/addfood.component';
-import { PanierComponent } from './panier/panier.component';
 import { SearchFComponent } from './search-f/search-f.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,7 +31,6 @@ import { CartComponent } from './cart/cart.component';
     NavbarComponent,
     
     AddfoodComponent,
-    PanierComponent,
     SearchFComponent,
     HomeComponent,
     CategoriesComponent,

@@ -12,4 +12,9 @@ export class FoodService {
     return this.http.get('http://localhost:8081/api/restaurants/getFooddeatildByRestaurant',{params:p});
   
   }
+
+  getAllFoods(){
+    // kif bch nsal7ou lbackend bch n3ayit lil api ijdid 
+  }
+
 }
