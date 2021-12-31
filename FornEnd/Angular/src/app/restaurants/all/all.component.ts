@@ -33,7 +33,7 @@ export class AllComponent implements OnInit {
   }
 
   getDetails(code: bigint){
-    this.router.navigate(["restaurants/restaurantDetails",code]);
+    this.router.navigate(["food/foodResto",code]);
   }
 
   
