@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'search_for_food', component:SearchForFoodComponent },
   { path: 'foodResto/:code', component:FoodComponent },
   { path: '', component: FoodComponent }
+
 ];
 
 
