@@ -1,4 +1,7 @@
-
+<head>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
 <nav *ngIf="nav.visible" class="navbar navbar-expand-lg navbar-dark bg" aria-label="Ninth navbar example">
     <div class="container-xl">
       <a class="navbar-brand" style="font-size: 30px;" routerLink="/home">Food delievery</a>
@@ -8,12 +11,14 @@
 
       <div class="collapse navbar-collapse" id="navbarsExample07XL">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <!--
           <li class="nav-item">
             <a class="nav-link active"  routerLink="/payments/factures">Payments</a>
-          </li>
+          </li>-->
+          <!--
           <li class="nav-item">
             <a class="nav-link active"  routerLink="/addfood">addfood</a>
-          </li>
+          </li>-->
          
           <li class="nav-item">
             <a class="nav-link active"  routerLink="/food/search_for_food">Food</a>
@@ -22,12 +27,15 @@
           <li class="nav-item">
             <a class="nav-link active"  routerLink="/restaurants/all">Restaurants</a>
           </li>
-          <li class="nav-item">
+         
+         <!--
+            <li class="nav-item">
             <a class="nav-link active"  routerLink="/admin/allusers">users</a>
-          </li>
+          </li>-->
+          <!--
           <li class="nav-item">
             <a class="nav-link active"  routerLink="/cart">Panier</a>
-          </li>
+          </li>-->
           <!-- categoriers -->
           <!-- <li class="nav-item">
             <a class="nav-link active"  routerLink="/categorie">Categories</a>
@@ -41,6 +49,7 @@
         
            <!-- categoriers -->
         </ul>
+        <a class="nav-link active"  routerLink="/cart"><i class="fas fa-shopping-cart" style="font-size:20px"></i></a>
            <button class="getstarted scrollto" routerLink="/authentication/login"  >Login</button>
            <button class="getstarted scrollto" routerLink="/authentication/signup"  >Signup</button>
            <button class="getstarted scrollto" (click)="logout()"  >Logout</button>
