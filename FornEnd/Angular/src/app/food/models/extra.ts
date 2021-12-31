@@ -1,8 +1,8 @@
 
 export interface Extra{
-    codeextra:number;
-    nameextra:String;
-    prixfood:number;
-    quantiteextra:number;
+    code:number;
+    name:String;
+    prixExtra:number;
+    quantiteExtra:number;
 
 }
