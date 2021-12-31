@@ -1,1 +1,49 @@
-<p>search-f works!</p>
+
+
+                  <form #searchForm="ngForm" (submit)="search(searchForm)" >
+
+                    <div class="input-group">
+                      <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" (keyup)="onKey($event)" placeholder="Search ...">
+                      <button type="button" class="btn btn-outline-dark">Search</button><br>
+                    </div>
+                    Pick your search method:
+                      <input type="radio"  class="btn-check" id="1" autocomplete="off" name="inlineRadioOptions" (change)="searchMethod($event)" value="restaurant">
+                      <label class="btn btn-outline-dark" for="1">Search by Restaurant </label>
+
+                      <input type="radio"  class="btn-check" id="btn-check-outlined" autocomplete="off" name="inlineRadioOptions" (change)="searchMethod($event)" value="food">
+                      <label class="btn btn-outline-dark" for="btn-check-outlined">Search by food</label>
+
+          
+                        <!-- <input type="text" id="form3Example1c" class="form-control" [(ngModel)]="username" name="username"/>
+                        <label class="form-label" for="form3Example1c">Username</label>
+                     
+  
+ 
+                        <input type="email" id="form3Example3c" class="form-control" [(ngModel)]="email" name="email"/>
+                        <label class="form-label" for="form3Example3c">Email</label>
+ 
+  
+      
+                        <input type="password" id="form3Example4c" class="form-control" [(ngModel)]="password" name="password" />
+                        <label class="form-label" for="form3Example4c">Password</label> -->
+                     
+  
+                    <!-- <div class="form-check d-flex justify-content-center mb-5"> -->
+                      <!-- <input -->
+                        <!-- class="form-check-input me-2"
+                        type="checkbox"
+                        value=""
+                        id="form2Example3c"
+                        [(ngModel)]="acceptedTerms"
+                        name="acceptedTerms"
+                      />
+
+                    </div> -->
+  
+                    <!-- <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <input type="submit" value="Register" class="btn btn-primary btn-lg getstarted scrollto">
+                    </div> -->
+  
+                  </form>
+  
+   

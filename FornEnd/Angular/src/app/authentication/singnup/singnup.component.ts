@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
+import { FormControl, FormGroup, NgForm, NgModel } from '@angular/forms';
+import{  SignupService } from '../../Services/Apis/signup.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-singnup',
@@ -7,9 +10,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingnupComponent implements OnInit {
 
-  constructor() { }
+  signupForm;
+  username;
+  email;
+  password;
+  acceptedTerms;
+
+  constructor(private signupService:SignupService, private router:Router) { }
 
   ngOnInit(): void {
+    
+  }
+
+  signup(form:NgForm){
+
+    const postBody={
+      username : form.value.username,
+      email : form.value.email,
+      password : form.value.password
+    }
+    
+    this.signupService.addUser(postBody).subscribe(
+      (data)=>{
+        if(data == null){
+          console.log("Failed to sign you up! please try again later");
+        }else{
+          this.router.navigate(["/authentication/login"]);
+        }
+      },
+      (error)=>{
+        //ma7abetch tcatchi lerror
+        console.log("Failed to sign you up! Error : " + error);
+      }
+    );
+
+
   }
 
 }

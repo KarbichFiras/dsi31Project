@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Restaurant } from '../models/restaurant';
-import { RESTAURANTS } from '../models/restaurantsList';
+import { RestaurantsService } from '../../Services/Apis/restaurants.service'
+import { SharedRestaurantsService } from '../../Services/Shared/restaurant.service'
 
 @Component({
   selector: 'app-restaurant-details',
@@ -10,44 +10,29 @@ import { RESTAURANTS } from '../models/restaurantsList';
 })
 export class RestaurantDetailsComponent implements OnInit {
 
-  restaurantCode : string ="";
-  restaurants = RESTAURANTS ;
-  restaurant  : Restaurant = {
-    code : "",
-    adresse : "",    
-    email : "",
-    enabled : false,
-    name : "",
-    image_code : "",
-  };
-
-  constructor(private route: ActivatedRoute) { }
+  restaurantCode  ;
+  restaurants = this.sharedRestaurantsService.getRestaurants();
+  restaurant;
+  
+  constructor(private route: ActivatedRoute, private sharedRestaurantsService:SharedRestaurantsService, private restaurantsService:RestaurantsService) { }
 
   ngOnInit(): void {
-      this.route.params.subscribe(params=>{
-        this.restaurantCode = params.id;
-        //console.log(this.restaurantCode);
-      })
+      this.getRestaurantCode();
       this.getRestaurant(this.restaurantCode);
+      //console.log(this.restaurantCode);
   }
 
-  getRestaurant(restaurantCode : string){
-      let restauIndex = this.fetchRetsaurant(restaurantCode);
-     
-      this.restaurant = this.restaurants[restauIndex];
-
+  getRestaurantCode() {
+    this.route.params.subscribe(params=>{
+      this.restaurantCode = params.id;
+    })
   }
 
-  fetchRetsaurant(restaurantCode : string):number{
-    let restauIndex :number = -1;
-    
-    this.restaurants.forEach(function(r,index){
-      if(r.code === restaurantCode){
-        restauIndex = index;
-      }
+  getRestaurant(code: bigint){
+    this.restaurantsService.getRestaurant(code).subscribe(data=>{
+      //console.log(data);
+      this.restaurant = data;
     });
-
-    return restauIndex;
   }
 
 }
