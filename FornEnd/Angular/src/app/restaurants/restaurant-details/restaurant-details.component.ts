@@ -24,7 +24,7 @@ export class RestaurantDetailsComponent implements OnInit {
 
   getRestaurantCode() {
     this.route.params.subscribe(params=>{
-      this.restaurantCode = params.id;
+      this.restaurantCode = params.code;
     })
   }
 
