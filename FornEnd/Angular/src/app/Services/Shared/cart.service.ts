@@ -10,7 +10,7 @@ const PANIER_KEY : string ="Panier";
 export class CartService {
 
   cartItems: Product[] = [];
-  numItemmsInCart = new BehaviorSubject(0); // 3titou empty array 5ater length te3ou bch ykoun 0 milouwel
+  numItemmsInCart = new BehaviorSubject(this.cartItems); // 3titou empty array 5ater length te3ou bch ykoun 0 milouwel
   constructor() { }
 
   //method qui crrer le panier dans le localStorage avec 0 valeurs ==> just bch tasna3ha
@@ -85,7 +85,7 @@ export class CartService {
         product.quantiteFood = 1
         this.cartItems.push(product);
       }
-      this.numItemmsInCart.next(this.cartItems.length);
+      this.numItemmsInCart.next(this.cartItems);
       //console.log(this.cartItems);
   }
 

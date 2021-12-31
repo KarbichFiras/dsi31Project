@@ -38,7 +38,8 @@ export class ProductComponent implements OnInit {// product ma3neha 1 food , sam
       // 1) t5abih fil sharedService ili heya 3ibara 3la ch9af gloal 
       this.sharedProductService.setProduct(data);
 
-      this.cartService.numItemmsInCart.subscribe(data =>{
+      this.cartService.numItemmsInCart.subscribe(cart =>{
+        this.numItemmsInCart = cart.length;
         //console.log("number of items in cart is : " + data);
       })
     });
