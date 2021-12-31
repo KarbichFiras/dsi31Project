@@ -11,10 +11,12 @@ import { UpdateCategorieComponent } from './categories/updateCategorie/update-ca
 import { DeleteCategorieComponent } from './categories/delete-categorie/delete-categorie.component';
 import { AuthGuardService as AuthGuard } from './Services/Guards/auth-guard.service';
 import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
 const routes : Routes =[
 
       { path: '',   redirectTo: 'home', pathMatch: 'full' },
       {path :"home" , component : HomeComponent },
+      {path :"payment" , component : PaymentComponent },
       {path :"payments" , component : PaymentsComponent},
       {path :"addfood" , component : AddfoodComponent , canActivate:[AuthGuard] },
       {path :"cart" , component: CartComponent },
