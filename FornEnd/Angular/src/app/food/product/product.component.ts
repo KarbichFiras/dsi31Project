@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { ProductService } from 'src/app/Services/Apis/product.service';
 import { CartService } from 'src/app/Services/Shared/cart.service';
 import { SharedProductService } from 'src/app/Services/Shared/product.service';
-import { Product } from '../models/product';
+import { Product } from '../models/Product';
 
 @Component({
   selector: 'app-product',

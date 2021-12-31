@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Product } from 'src/app/food/models/product';
+import { Product } from 'src/app/food/models/Product';
 
 const PANIER_KEY : string ="Panier";
 
