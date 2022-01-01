@@ -68,8 +68,8 @@ export class CartService {
   }
 
   getNumItemmsInCart(){
-    let ls = JSON.parse(localStorage.getItem(CART_KEY) || ""); 
-  return ls.length+1;
+    let ls = JSON.parse(localStorage.getItem(CART_KEY) || "{}" ); 
+    return ls.length+1;
   }
 
 }
