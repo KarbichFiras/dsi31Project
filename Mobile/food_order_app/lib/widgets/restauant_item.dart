@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_order_app/providers/cart.dart';
+import 'package:food_order_app/screens/restaurant_overview_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:food_order_app/providers/food.dart';
-import 'FoodDetailScreen.dart';
-
-class FoodItem extends StatelessWidget {
+import 'package:food_order_app/providers/restaurant.dart';
+import '../screens/foods_overview_screen.dart';
+class RestaurantItem extends StatelessWidget {
 
 /*
   final String id;
@@ -12,7 +12,7 @@ class FoodItem extends StatelessWidget {
   final String imageUrl;
 */
 
-  FoodItem();
+  RestaurantItem();
 
   @override
   Widget build(BuildContext context) {
@@ -23,49 +23,43 @@ class FoodItem extends StatelessWidget {
 
     print('called build method');
 
-    return Consumer<Food>(
-      builder: (context,food,child)=>ClipRRect(
+    return Consumer<Restaurant>(
+      builder: (context,restaurant,child)=>ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: GridTile(
           child: GestureDetector(
             onTap: () {
               Navigator.of(context).pushNamed(
-                  FoodDetailScreen.routeName,
-                  arguments: food.id
+                  FoodsOverviewScreen.routeName,
+                  arguments: restaurant.id
               );
             },
             child: Image.asset(
-              food.imageUrl,
+              restaurant.imageUrl,
               fit: BoxFit.fitHeight,
             ),
           ),
           footer: GridTileBar(
             backgroundColor: Colors.black45,
             leading: IconButton(
-              icon: Icon(food.isFavorite?Icons.favorite:Icons.favorite_border),
+              icon: Icon(restaurant.isFavorite?Icons.favorite:Icons.favorite_border),
               color: Theme.of(context).accentColor,
               onPressed: () {
-                food.toggleFavoriteData();
+                restaurant.toggleFavoriteData();
               },
             ),
             title: Text(
-              food.title,
+              restaurant.title,
               textAlign: TextAlign.center,
             ),
             trailing: IconButton(
+
               icon: Icon(
-                Icons.shopping_cart,
+
+                Icons.arrow_forward,
               ),
               onPressed: () {
-                cart.addItem(food.id, food.price, food.title);
-
-                ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Added item to cart',textAlign: TextAlign.center,),
-                      duration: Duration(seconds: 4),
-                      action: SnackBarAction(label: 'UNDO',onPressed: (){cart.removeItem(food.id);},),
-                    )
-                );
+                Navigator.push(context, MaterialPageRoute(builder:(cnx){return FoodsOverviewScreen();}));
 
               },
               color: Theme.of(context).accentColor,

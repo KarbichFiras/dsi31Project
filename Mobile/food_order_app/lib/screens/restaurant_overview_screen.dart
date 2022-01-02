@@ -5,10 +5,10 @@ import 'package:food_order_app/screens/cart_screen.dart';
 import 'package:food_order_app/widgets/app_drawer.dart';
 import 'package:food_order_app/widgets/badge.dart';
 import 'package:provider/provider.dart';
-import '../widgets/foods_grid.dart';
+import '../widgets/restaurants_grid.dart';
 
-class FoodsOverviewScreen extends StatelessWidget {
-  static const routeName = '/FoodsOverviewScreen';
+class RestauarantsOverviewScreen extends StatelessWidget {
+  static const routeName = '/restaurantsOverviewScreen';
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +18,12 @@ class FoodsOverviewScreen extends StatelessWidget {
     ));
     return Scaffold(
       appBar: AppBar(
-        title: Text(' Foods '),
+        centerTitle: true,
+        title: Text(' wakalni'),
         actions: [
 
           Consumer<Cart>(
-            builder: (context,cart,chid)=>Badge(
+            builder: (context,cart,child)=>Badge(
               child:  IconButton(
                 icon: Icon(Icons.shopping_cart),
                 color: Colors.white,
@@ -35,7 +36,7 @@ class FoodsOverviewScreen extends StatelessWidget {
         ],
       ),
       drawer: AppDrawer(),
-      body: FoodsGrid(),
+      body: RestaurantsGrid(),
     );
   }
 }
