@@ -11,15 +11,13 @@ export class SharedRestaurantsService {
 
   constructor() { }
   
-
-  
+  private restaurantSource = new  BehaviorSubject(this.getRestaurants);
+  currentrestaurant = this.restaurantSource.asObservable();
 
   getRestaurants(){
     return this.restaurants;
   }
-  private restaurantSource = new  BehaviorSubject(this.getRestaurants);
-  currentrestaurant = this.restaurantSource.asObservable();
-
+ 
   setRestaurants(restaurants){
     this.restaurantSource.next(restaurants)
   //  this.restaurants = restaurants;

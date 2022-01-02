@@ -31,8 +31,8 @@ export class CartService {
       let p:Product[] =  JSON.parse(ls || '{}');
     
       for(let i=0; i<p.length;i++){
-        let itemCode = p[i].restaurantName + p[i].food.libelle;
-        let productCode = product.restaurantName + product.food.libelle;
+        let itemCode = p[i].restaurantName + p[i].foodwithextras.food.libelle;
+        let productCode = product.restaurantName + product.foodwithextras.food.libelle;
           // will check if the item is already exist into the cart
           if( itemCode === productCode ){
             exist = true;
