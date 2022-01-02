@@ -11,7 +11,7 @@ export class RestaurantsService {
   getRestaurants(){
 
     // return this.http.get('http://localhost:8080/restaurants/getAllRestaurants');
-    return this.http.get('http://localhost:8081/api/restaurants/getAllRestaurants');
+    return this.http.get('http://localhost:8080/restaurants/getAllRestaurants');
 // 
 
   }

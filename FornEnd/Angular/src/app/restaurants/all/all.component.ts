@@ -21,6 +21,7 @@ export class AllComponent implements OnInit {
       this.getRestaurants();
     
     this.sharedRestaurantsService.currentrestaurant.subscribe(data =>{
+      console.log(data)
         this.restaurants=data;
       });
   }
