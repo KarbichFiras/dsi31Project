@@ -10,7 +10,6 @@ export class FoodService {
   getFoodExtraCategorie(code: string){
     let p=new HttpParams().set('code',code);
     return this.http.get('http://localhost:8081/api/restaurants/getFooddeatildByRestaurant',{params:p});
-  
   }
 
   getAllFoods(){

@@ -1,8 +1,11 @@
+import { Menu } from "./Menu";
+
 export interface Restaurant{
     code : String,
     name : string,
     adresse : String,
     email : String,
-    enabled : Boolean,
-    image_code : String,
+    description,
+    image : String,
+    menus: Menu[],
 }

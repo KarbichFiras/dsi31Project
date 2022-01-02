@@ -17,7 +17,7 @@ export class FoodComponent implements OnInit {
   restaurantCode;
   foodExtraCategs;
   restoname;
-
+  foodWithExtras;
   
 
   constructor(private route: ActivatedRoute, private foodService:FoodService, 
@@ -25,7 +25,7 @@ export class FoodComponent implements OnInit {
 
   ngOnInit(): void {
       this.getRestaurantCode();
-      this.getFoodsByRestaurantCode();
+      this.getFoodsByRestaurantCode();      
     
   }
 
