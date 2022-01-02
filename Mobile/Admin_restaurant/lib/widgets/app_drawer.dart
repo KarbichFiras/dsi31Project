@@ -1,9 +1,15 @@
+
+import 'package:admin_restaurant/screens/add_item.dart';
+import 'package:admin_restaurant/screens/add_menu_item.dart';
+import 'package:admin_restaurant/screens/food_detail_screen.dart';
+import 'package:admin_restaurant/screens/food_list.dart';
+import 'package:admin_restaurant/screens/menu_list.dart';
 import 'package:flutter/material.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Drawer(
+    return  Drawer(
       child: ListView(
         children: [
           const UserAccountsDrawerHeader(
@@ -13,7 +19,7 @@ class AppDrawer extends StatelessWidget {
               child: Text('blastImage'),
             ),
             decoration: BoxDecoration(color: Colors.black),
-            /* otherAccountsPictures: [
+           /* otherAccountsPictures: [
               CircleAvatar(
                 child: Text('X'),
               ),
@@ -25,12 +31,37 @@ class AppDrawer extends StatelessWidget {
           ListTile(
             title: Text('add food'),
             trailing: Icon(Icons.arrow_forward),
-            onTap: () {
-              // Navigator.push(context, MaterialPageRoute(builder:(cnx){return }));
+            onTap: (){
+               Navigator.push(context, MaterialPageRoute(builder:(cnx){return AddItem();}));
 
               print('Shop');
             },
           ),
+          ListTile(
+            title: Text('Manage food'),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: (){
+
+              Navigator.push(context, MaterialPageRoute(builder:(cnx){return FoodListScreen();}));
+            },
+          ),
+          ListTile(
+            title: Text('add menu'),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: (){
+
+              Navigator.push(context, MaterialPageRoute(builder:(cnx){return AddMenuItem();}));
+            },
+          ),
+          ListTile(
+            title: Text('manage manu'),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: (){
+
+              Navigator.push(context, MaterialPageRoute(builder:(cnx){return MenuListScreen();}));
+            },
+          ),
+
         ],
       ),
     );
