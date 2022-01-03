@@ -5,26 +5,23 @@
           <h1 class="h1">OUR FOODS</h1>
       </header>
      
-      <div class="row align-items-md-stretch" *ngFor="let food of foods">
-        <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="row align-items-md-stretch" *ngFor="let food of foods;let indexOfelement=index;">
+        <div class="p-5 mb-4 bg-danger rounded-3">
           <div class="container-fluid py-5">
-            <img class="fit-picture" 
-     src="../../../assets/images/f5.png"
-     >
-              <h1  class="display-5 fw-bold p-3 mb-2 bg-warning text-dark rounded-circle" >{{food.libelle}}  {{food.categorie.name}}  <span class="p-3 mb-2 bg-warning text-dark">Status:</span><span class="text-success">{{food.categorie.enabled}}</span >  <br> <span class="btn btn-danger btn-lg rounded-circle">{{food.prix}} DT</span></h1>
+            <img class="fit-picture"   src="../../../assets/images/f{{indexOfelement+1}}.png">
+              <h1  class="display-5 fw-bold p-3 mb-2 bg-warning text-dark rounded-circle" >{{food.libelle}}  {{food.categorie.name}}  <span class="p-3 mb-2 bg-warning text-dark">Status:</span><span class="text-success">{{food.categorie.enabled}}</span >  <br> <span class="btn btn-light btn-lg rounded-circle">{{food.prix}} DT</span></h1>
               <p class="col-md-100 fs-4   bg-gradient-danger text-dark "></p>
-              <button class="btn btn-danger btn-lg rounded-circle" type="button"><a   class="nav-link "  routerLink="/restaurants/all">GO RESTO</a></button>
+              <button class="btn btn-dark btn-lg rounded-circle" type="button"><a style="text-decoration: none"   class="nav-link "  routerLink="/restaurants/all">GO RESTO</a></button>
           </div>
+      </div>       
       </div>
-         
-      </div>
-
       <footer class="pt-3 mt-4 text-muted border-top">
           &copy; 2021-2022 all right reserved BY chmen9lawess team
       </footer>
   </div>
 </main>
-<!-- <div>
+
+ <!-- <div>
   <h2 style="text-align:center;margin-top:20px">foods</h2> 
   <h1>{{foods | json }}</h1>
 
@@ -35,6 +32,6 @@
   <button (click)="updateFood()" class="btn btn-info getstarted scrollto">Updated Food(Consol)</button>
   <button (click)="deleteFood()" class="btn btn-info getstarted scrollto">Delete Food(Consol)</button>
   
-</div> -->
+</div>  -->
 
 
