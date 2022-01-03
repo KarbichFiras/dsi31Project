@@ -17,15 +17,18 @@ export class RestaurantsService {
   }
 
   getRestaurant(code: bigint){
-    // return this.http.get('http://localhost:8080/restaurants/getRestaurantByCode/'+code);
-    return this.http.get('http://localhost:8081/api/restaurants/getRestaurantByCode/'+code);
+    return this.http.get('http://localhost:8080/restaurants/getRestaurantByCode/'+code);
+    // return this.http.get('http://localhost:8081/api/restaurants/getRestaurantByCode/'+code);
 
   }
 
   getRestaurantByName(partnameResto: String){
-    // return this.http.get('http://localhost:8080/restaurants/getSpecificRestaurant?partnameResto='+partnameResto);
-    return this.http.get('http://localhost:8081/api/restaurants/getSpecificRestaurant?partnameResto='+partnameResto);
+    return this.http.get('http://localhost:8080/restaurants/getSpecificRestaurant?partnameResto='+partnameResto);
+    // return this.http.get('http://localhost:8081/api/restaurants/getSpecificRestaurant?partnameResto='+partnameResto);
   }
   getRestaurantByFood(partLibelleFood : string){
-    return this.http.get('http://localhost:8081/api/restaurants/getRestaurantByFood?partLibelleFood='+partLibelleFood);  }
+    return this.http.get('http://localhost:8080//restaurants/getRestaurantByFood?partLibelleFood='+partLibelleFood);
+
+    // return this.http.get('http://localhost:8081/api/restaurants/getRestaurantByFood?partLibelleFood='+partLibelleFood);
+    }
 }

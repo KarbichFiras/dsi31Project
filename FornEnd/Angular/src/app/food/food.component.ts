@@ -6,7 +6,6 @@ import { CartService } from '../Services/Shared/cart.service';
 import{FoodExtraCategorie} from './models/FoodExtraCategorie'
 
 
-
 const PANIER_KEY : string ="Panier";
 @Component({
   selector: 'app-food',

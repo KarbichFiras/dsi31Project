@@ -29,6 +29,8 @@ const routes : Routes =[
       { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)},
       { path: 'payments', loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
       { path: 'food', loadChildren: () => import('./food/food.module').then(m => m.FoodModule) },
+
+      { path: 'search_restaurant', loadChildren: () => import('./search/search.module').then(m => m.SearchModule) },
       {path :"**" , component: NotfoundComponent },
       
     ];

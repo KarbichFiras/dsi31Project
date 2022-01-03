@@ -1,10 +1,11 @@
 import 'package:flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:food_order_app/providers//user.dart';
 import 'package:food_order_app/providers/auth_provider.dart';
-
+import 'package:food_order_app/providers/user_provider.dart';
 import 'package:food_order_app/utility/validator.dart';
-
+import 'package:food_order_app/utility/widgets.dart';
 import 'package:provider/provider.dart';
 
 class Register extends StatefulWidget {
@@ -25,7 +26,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
 
-    AuthProvider auth = Provider.of<AuthProvider>(context);
+    //AuthProvider auth = Provider.of<AuthProvider>(context);
 
     var loading  = Row(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -43,24 +44,24 @@ class _RegisterState extends State<Register> {
 
         form.save();
 
-        auth.loggedInStatus = Status.Authenticating;
+        /*auth.loggedInStatus = Status.Authenticating;
         auth.notify();
 
         Future.delayed(loginTime).then((_) {*/
           Navigator.pushReplacementNamed(context, '/login');
-          auth.loggedInStatus = Status.LoggedIn;
-          auth.notify();
-        });
+         // auth.loggedInStatus = Status.LoggedIn;
+        //  auth.notify();
+        //});
 
         // now check confirm password
         if(_password.endsWith(_confirmPassword)){
 
-          auth.register(_username, _password).then((response) {
-            if(response['status']){
-              User user = response['data'];
-              Provider.of<UserProvider>(context,listen: false).setUser(user);
+         // auth.register(_username, _password).then((response) {
+          //  if(response['status']){
+            //  User user = response['data'];
+              //Provider.of<UserProvider>(context,listen: false).setUser(user);
               Navigator.pushReplacementNamed(context, '/login');
-            }else{
+           /* }else{
               Flushbar(
                 title: 'Registration fail',
                 message: response.toString(),
@@ -125,9 +126,9 @@ class _RegisterState extends State<Register> {
                   decoration: buildInputDecoration("Enter Confirm Password", Icons.lock),
                 ),
                 SizedBox(height: 20.0,),
-                auth.loggedInStatus == Status.Authenticating
+                /*auth.loggedInStatus == Status.Authenticating
                     ?loading
-                    : longButtons('Register',doRegister)
+                    :*/ longButtons('Register',doRegister)
               ],
             ),
           ),
