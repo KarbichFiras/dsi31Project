@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:food_order_app/screens/cart_screen.dart';
 import 'package:food_order_app/screens/restaurant_overview_screen.dart';
 import 'package:food_order_app/screens/foods_overview_screen.dart';
+
+
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -24,6 +27,7 @@ class AppDrawer extends StatelessWidget {
                 child: Text('X'),
               )
             ],*/
+
     ),
     ListTile(
     title: Text('Restaurant'),
@@ -42,6 +46,7 @@ class AppDrawer extends StatelessWidget {
     },
     ),
     ListTile(
+
     title: Text('cart'),
     trailing: Icon(Icons.arrow_forward),
     onTap: (){
@@ -61,6 +66,7 @@ class AppDrawer extends StatelessWidget {
 
     ],
     ),
+
     );
   }
 }

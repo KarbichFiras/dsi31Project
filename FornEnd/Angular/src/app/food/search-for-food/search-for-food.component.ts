@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import{ AddFoodsService } from '../../Services/add-foods.service'
+import { FoodService } from 'src/app/Services/Apis/food.service';
 import { Food } from '../models/food';
 
 @Component({
   selector: 'app-search-for-food',
   templateUrl: './search-for-food.component.html',
-  styleUrls: ['./search-for-food.component.css']
+  styleUrls: ['./search-for-food.component.css'],
+  providers:[FoodService]
 })
 export class SearchForFoodComponent implements OnInit {
 
   foods : any;
   
-  constructor(private addfoodsservice:AddFoodsService) { }
+  constructor(private addfoodsservice:AddFoodsService,private foodService:FoodService) { }
 
   ngOnInit(): void {
  this.getAllFoods();
@@ -19,7 +21,7 @@ export class SearchForFoodComponent implements OnInit {
   }
 
   getAllFoods(){
- this.addfoodsservice.getAllFoods().subscribe(data=>{
+ this.foodService.getAllFoods().subscribe(data=>{
  
      this.foods = data;
    });

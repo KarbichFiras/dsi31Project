@@ -1,6 +1,14 @@
+import 'package:admin_restaurant/providers/menus.dart';
+import 'package:admin_restaurant/screens/add_item.dart';
+import 'package:admin_restaurant/screens/add_menu_item.dart';
+import 'package:admin_restaurant/screens/edit_item.dart';
+import 'package:admin_restaurant/screens/edit_menu_item.dart';
+import 'package:admin_restaurant/screens/login_page.dart';
 import 'package:flutter/material.dart';
 
-
+import 'package:provider/provider.dart';
+import './screens/food_detail_screen.dart';
+import './providers/foods.dart';
 
 
 void main() => runApp(MyApp());
@@ -9,7 +17,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_)=>Foods()),
+        ChangeNotifierProvider(create: (_)=>Menus()),
+      ],
       child: MaterialApp(
           title: 'Image Loader',
           debugShowCheckedModeBanner: false,
@@ -19,8 +31,14 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Lato',
 
           ),
-         // home: LoginPage(),
-
+          home: LoginPage(),
+          routes: {
+            FoodDetailScreen.routeName: (ctx) => FoodDetailScreen(),
+            AddItem.routeName: (ctx) => AddItem(),
+            EditMenuItem.routeName:(ctx)=>EditMenuItem(),
+            EditItem.routeName:(ctx)=>EditItem(),
+            AddMenuItem.routeName:(ctx)=>AddMenuItem()
+          }
       ),
     );
 
