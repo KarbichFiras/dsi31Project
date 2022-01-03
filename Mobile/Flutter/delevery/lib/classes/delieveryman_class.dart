@@ -1,4 +1,0 @@
-class delieveryman{
-  //extends personee
-
-}
