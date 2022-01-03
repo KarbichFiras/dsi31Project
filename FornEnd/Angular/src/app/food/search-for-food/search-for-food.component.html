@@ -6,14 +6,14 @@
       </header>
      
       <div class="row align-items-md-stretch" *ngFor="let food of foods">
-        <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="p-5 mb-4 bg-danger rounded-3">
           <div class="container-fluid py-5">
             <img class="fit-picture" 
      src="../../../assets/images/f5.png"
      >
-              <h1  class="display-5 fw-bold p-3 mb-2 bg-warning text-dark rounded-circle" >{{food.libelle}}  {{food.categorie.name}}  <span class="p-3 mb-2 bg-warning text-dark">Status:</span><span class="text-success">{{food.categorie.enabled}}</span >  <br> <span class="btn btn-danger btn-lg rounded-circle">{{food.prix}} DT</span></h1>
+              <h1  class="display-5 fw-bold p-3 mb-2 bg-warning text-dark rounded-circle" >{{food.libelle}}  {{food.categorie.name}}  <span class="p-3 mb-2 bg-warning text-dark">Status:</span><span class="text-success">{{food.categorie.enabled}}</span >  <br> <span class="btn btn-light btn-lg rounded-circle">{{food.prix}} DT</span></h1>
               <p class="col-md-100 fs-4   bg-gradient-danger text-dark "></p>
-              <button class="btn btn-danger btn-lg rounded-circle" type="button"><a   class="nav-link "  routerLink="/restaurants/all">GO RESTO</a></button>
+              <button class="btn btn-dark btn-lg rounded-circle" type="button"><a style="text-decoration: none"   class="nav-link "  routerLink="/restaurants/all">GO RESTO</a></button>
           </div>
       </div>
          
