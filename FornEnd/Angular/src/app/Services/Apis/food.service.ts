@@ -13,7 +13,8 @@ export class FoodService {
   }
 
   getAllFoods(){
-    // kif bch nsal7ou lbackend bch n3ayit lil api ijdid 
+   
+    return this.http.get('http://localhost:8080/getAllFoods');
   }
 
 }
