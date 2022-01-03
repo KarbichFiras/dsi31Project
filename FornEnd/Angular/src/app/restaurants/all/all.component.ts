@@ -3,6 +3,7 @@ import { RESTAURANTS } from '../models/restaurantsList';
 import { RestaurantsService } from '../../Services/Apis/restaurants.service'
 import { SharedRestaurantsService } from '../../Services/Shared/restaurant.service'
 import { Router } from '@angular/router';
+import { FoodsSahredService } from 'src/app/Services/Shared/foodsSahred.service';
 @Component({
   selector: 'app-all',
   templateUrl: './all.component.html',
@@ -11,8 +12,9 @@ import { Router } from '@angular/router';
 export class AllComponent implements OnInit {
 
   restaurants;
+  foods;
 
-  constructor(private restaurantsService : RestaurantsService, private sharedRestaurantsService:SharedRestaurantsService, private router:Router) { }
+  constructor(private restaurantsService : RestaurantsService, private sharedRestaurantsService:SharedRestaurantsService, private router:Router,private foodShared :FoodsSahredService) { }
   
   ngOnInit(): void {
 
@@ -24,6 +26,10 @@ export class AllComponent implements OnInit {
       console.log(data)
         this.restaurants=data;
       });
+    this.foodShared.currentFoods.subscribe(data => {
+        this.foods=data;
+    })
+
   }
  
   getRestaurants() {

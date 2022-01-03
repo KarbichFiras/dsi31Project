@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+
 import { NgForm } from '@angular/forms';
 import { SignupService } from '../Services/Apis/signup.service';
 import{ FormsModule } from '@angular/forms';
 import { RestaurantsService } from '../Services/Apis/restaurants.service';
 import { SharedRestaurantsService } from '../Services/Shared/restaurant.service';
+import { FoodsSahredService } from '../Services/Shared/foodsSahred.service';
+import { FoodService } from '../Services/Apis/food.service';
 @Component({
   selector: 'app-search-f',
   templateUrl: './search-f.component.html',
@@ -17,10 +20,13 @@ export class SearchFComponent implements OnInit {
   password;
   acceptedTerms;
   restaurants;
+  foods;
   SearchBy;
-  constructor(private restaurantsService : RestaurantsService,private sharedRestaurantsService:SharedRestaurantsService) { }
+  constructor(private restaurantsService : RestaurantsService,private sharedRestaurantsService:SharedRestaurantsService,
+    private foodShared :FoodsSahredService,private foodService:FoodService) { }
 
   ngOnInit(): void {
+    //in restaurant page
     if(this.sharedRestaurantsService.getRestaurants() == null){
       this.getRestaurants();  
     }else{
@@ -30,11 +36,24 @@ export class SearchFComponent implements OnInit {
         this.restaurants=data;
       });
     }
+///in foods page
+  if(this.foodShared.getFoods() == null){
+    this.getAllFoods(); 
+  }else{
+    this.foods=this.foodShared.getFoods();
+
+    this.foodShared.currentFoods.subscribe(data =>{
+      this.foods=data;
+    });
+  }
   }
   //EVENTS
   //fired when add caracter in the search bar
   onKey(event: any){
 
+    //par defaut
+    // this.getRestaurantByFood(event.target.value);
+    // this.getFoodByPartName(event.target.value);
     if(event.target.value != " "){
       if( this.SearchBy =="restaurant" ){
        
@@ -43,15 +62,16 @@ export class SearchFComponent implements OnInit {
         
         }
       else {
-        if(event.target.value != " "){
           console.log(event.target.value);
           this.getRestaurantByFood(event.target.value);
+          this.getFoodByPartName(event.target.value);
                
       }
     }
-  }else{
+  else{
         
       this.getRestaurants();
+      this.getAllFoods();
       } 
      
 
@@ -83,6 +103,20 @@ export class SearchFComponent implements OnInit {
   getRestaurantByFood(foodName : string){
     this.restaurantsService.getRestaurantByFood(foodName).subscribe(data => {
       this.restaurants = data;
+      this.sharedRestaurantsService.setRestaurants(data);
+    })
+  }
+    getAllFoods(){
+ this.foodService.getAllFoods().subscribe(data=>{
+ 
+     this.foods = data;
+   });
+  }
+ 
+  getFoodByPartName(foodname :String){
+    this.foodService.getFoodByPartName(foodname).subscribe(data => {
+      console.log(data); 
+      this.foods = data;
       this.sharedRestaurantsService.setRestaurants(data);
     })
   }

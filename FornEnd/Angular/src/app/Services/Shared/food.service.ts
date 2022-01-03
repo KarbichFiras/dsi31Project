@@ -24,4 +24,5 @@ export class FoodService {
   deleteFood(_id: string) {
     return this.http.delete(this.baseURL + `/${_id}`);
   }
+
 }

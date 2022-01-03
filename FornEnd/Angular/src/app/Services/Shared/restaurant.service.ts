@@ -9,11 +9,11 @@ export class SharedRestaurantsService {
 
   restaurants;
 
-  constructor() { }
+  
   
   private restaurantSource = new  BehaviorSubject(this.getRestaurants);
   currentrestaurant = this.restaurantSource.asObservable();
-
+  constructor() { }
   getRestaurants(){
     return this.restaurants;
   }

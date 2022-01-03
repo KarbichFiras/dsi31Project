@@ -16,5 +16,8 @@ export class FoodService {
    
     return this.http.get('http://localhost:8080/getAllFoods');
   }
+  getFoodByPartName(partLibelleFood : String){
+    return this.http.get('http://localhost:8080/getFoodByPartName?partLibelleFood='+partLibelleFood);  
 
+  }
 }
