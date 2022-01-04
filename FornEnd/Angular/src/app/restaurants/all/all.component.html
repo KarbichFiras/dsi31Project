@@ -1,12 +1,14 @@
 
+ 
 <div class="row" style="row-gap: 20px; column-gap: 20px; margin-top:20px; margin-left:20px ; align-items:center">
 
     <div class="card" style="width: 18rem;" *ngFor="let restaurant of restaurants">
-        <img src="../../assets/img/restauImage.jpg" class="card-img-top" alt="..." >
+        <img src="../../../assets/img/gallery/{{restaurant.name}}.jpg" class="card-img-top" alt="..." >
         <div class="card-body container">
-          <h5 class="card-title" style="text-align: center;">{{restaurant.name|titlecase}}</h5>
+          <h3 class="card-title fw-bold" style="text-align: center;">{{restaurant.name|titlecase}}</h3>
 
-          <p class="card-text">Mekletna bnina barcha , wndifa juste titsamim wkhw order now fech testana </p>
+          <p class="card-text">Description :{{restaurant.description}} </p>
+          <p class="card-text">Location :{{restaurant.adresse}} </p>
           <!-- <a class="btn btn-primary col-md-9 text-center getstarted" routerLink="/restaurants/restaurantDetails/{{restaurant.code}}" >Info</a> -->
           <!-- i make to param because it should take to the food of this restaurant -->
           <a class="btn btn-primary col-md-9 text-center getstarted" routerLink="/food/foodResto/{{restaurant.code}}" >Info</a>
@@ -20,4 +22,5 @@
     </div>
 
 </div>
+
 
